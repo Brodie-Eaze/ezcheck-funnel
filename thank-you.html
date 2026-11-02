@@ -1,0 +1,52 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>You're booked | EZ Check demo</title>
+<meta name="robots" content="noindex, nofollow">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+<link rel="icon" href="logo.svg" type="image/svg+xml">
+<link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+<header class="nav">
+  <a class="brand" href="index.html" aria-label="EZ Check home">
+    <svg width="32" height="32" viewBox="0 0 32 32" aria-hidden="true"><rect width="32" height="32" rx="9" fill="#0B1526"/><path d="M16 6.5a9.5 9.5 0 1 1-9.1 6.8" fill="none" stroke="#3B82F6" stroke-width="2.6" stroke-linecap="round"/><path d="M11.2 16.2l3.4 3.4 6.4-7" fill="none" stroke="#fff" stroke-width="2.8" stroke-linecap="round" stroke-linejoin="round"/></svg>
+    <b>EZ<span> Check</span></b>
+  </a>
+</header>
+
+<main class="ty">
+  <div class="narrow">
+    <div class="tick"><svg width="34" height="34" viewBox="0 0 24 24" fill="none" stroke="#fff" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6 9 17l-5-5"/></svg></div>
+    <h1>You're booked.<br><span class="accent">See you on the call.</span></h1>
+    <p class="lede" style="max-width:520px;margin:20px auto 0">A calendar invite and confirmation are on their way to your email. Add the call to your calendar so you don't miss it.</p>
+    <div class="when" id="when" hidden><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="4" width="18" height="18" rx="2"/><path d="M16 2v4M8 2v4M3 10h18"/></svg><span id="whenText"></span></div>
+
+    <div class="next">
+      <h2 style="font-size:26px;margin-bottom:18px" class="center">What happens next</h2>
+      <div style="display:grid;gap:12px">
+        <div class="card"><span class="step-n">1</span><div><h3>Check your email for the invite</h3><p>The confirmation has the call link. Add it to your calendar now.</p></div></div>
+        <div class="card"><span class="step-n">2</span><div><h3>Join the call at the booked time</h3><p>The demo takes about 30 minutes. We'll walk through the flow and your setup.</p></div></div>
+      </div>
+    </div>
+
+    <div class="hero-actions" style="margin-top:40px"><a class="btn btn-ghost" href="index.html">Back to overview</a></div>
+  </div>
+</main>
+
+
+<script>
+const s = new URLSearchParams(location.search).get('slot');
+const d = s && new Date(s);
+if (d && !isNaN(d)) {
+  document.getElementById('whenText').textContent = d.toLocaleString([], { weekday: 'long', month: 'long', day: 'numeric', hour: 'numeric', minute: '2-digit' });
+  document.getElementById('when').hidden = false;
+}
+</script>
+</body>
+</html>

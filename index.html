@@ -1,0 +1,467 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>EZ Check | Know who can pay before you sell</title>
+<meta name="description" content="EZ Check reads real credit, income and affordability on a soft pull the moment a lead comes in, then routes every lead by rules you set.">
+<meta name="robots" content="noindex, nofollow">
+<link rel="icon" href="logo.svg" type="image/svg+xml">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+<header class="nav">
+  <a class="brand" href="index.html" aria-label="EZ Check home">
+    <svg width="32" height="32" viewBox="0 0 32 32" aria-hidden="true"><rect width="32" height="32" rx="9" fill="#0B1526"/><path d="M16 6.5a9.5 9.5 0 1 1-9.1 6.8" fill="none" stroke="#3B82F6" stroke-width="2.6" stroke-linecap="round"/><path d="M11.2 16.2l3.4 3.4 6.4-7" fill="none" stroke="#fff" stroke-width="2.8" stroke-linecap="round" stroke-linejoin="round"/></svg>
+    <b>EZ<span> Check</span></b>
+  </a>
+  <nav class="nav-links">
+    <a href="#how">How it works</a>
+    <a href="#compare">Why it's different</a>
+    <a href="#trust">Trust</a>
+    <a href="#faq">FAQ</a>
+  </nav>
+  <div class="nav-cta">
+    <a class="btn btn-ghost btn-sm" href="#how">See how it works</a>
+    <a class="btn btn-primary btn-sm" href="book.html">Book a demo</a>
+  </div>
+</header>
+
+<main>
+
+<!-- ═══ Hero ═══ -->
+<section class="hero">
+  <div class="wrap">
+    <h1 class="rv">Know who can pay<br><span class="accent">before you sell.</span></h1>
+    <p class="lede rv" style="--d:.08s">EZ Check reads real credit, income and affordability on a soft pull the moment a lead comes in. Then it sends every lead where it belongs.</p>
+    <div class="hero-actions rv" style="--d:.16s">
+      <a class="btn btn-primary" href="book.html">Book a demo</a>
+      <a class="btn btn-ghost" href="#how">See how it works</a>
+    </div>
+    <div class="hero-note rv" style="--d:.22s">
+      <span>Soft pull only</span><span>No impact on credit scores</span><span>Works with your funnel</span>
+    </div>
+
+    <div class="stage rv" style="--d:.3s">
+      <div class="console">
+        <div class="app-col feedcol">
+          <div class="app-title"><span>New enquiries</span><span>Live</span></div>
+          <div class="feed" id="feed"></div>
+        </div>
+        <div class="app-col">
+          <div class="panel-head">
+            <div style="display:flex;gap:12px;align-items:center">
+              <div class="av" id="pAv">SM</div>
+              <div><b id="pName">Sarah M.</b><br><small class="muted" id="pType" style="font-size:12.5px">Opted in from a Meta ad</small></div>
+            </div>
+            <span class="tag" id="pTag">New</span>
+          </div>
+          <div class="metrics">
+            <div class="metric scan" id="m0"><small>Credit score</small><b id="v0">--</b><div class="bar"><span id="b0" style="width:0"></span></div></div>
+            <div class="metric scan" id="m1"><small>Monthly income</small><b id="v1">--</b><div class="bar"><span id="b1" style="width:0"></span></div></div>
+            <div class="metric scan" id="m2"><small>Debt to income</small><b id="v2">--</b><div class="bar"><span id="b2" style="width:0"></span></div></div>
+            <div class="metric scan" id="m3"><small>Available credit</small><b id="v3">--</b><div class="bar"><span id="b3" style="width:0"></span></div></div>
+          </div>
+          <div class="decision" id="dec">
+            <div><b id="decT">Reading on a soft pull</b><small id="decS">No credit score impact</small></div>
+            <span class="dest" id="decD">Waiting</span>
+          </div>
+        </div>
+        <div class="app-col today">
+          <div class="app-title"><span>Routed today</span><span>Sample</span></div>
+          <div class="stat"><small>Leads checked</small><b id="sAll">0</b></div>
+          <div class="lane"><span><i style="background:#2563eb"></i>Sales calendar</span><b id="sHi">0</b></div>
+          <div class="lane"><span><i style="background:#93b4fb"></i>Low-ticket offer</span><b id="sLo">0</b></div>
+          <div class="lane"><span><i style="background:#d6d0cc"></i>Nurture</span><b id="sNu">0</b></div>
+        </div>
+      </div>
+    </div>
+    <p class="mock-label">Illustration with sample data. Not real applicants.</p>
+  </div>
+</section>
+
+<div class="marquee" aria-hidden="true">
+  <div class="marquee-track">
+    <span>Dental clinics</span><span>Medical clinics</span><span>Med spas</span><span>Home improvement</span><span>Roofing</span><span>Solar</span><span>Coaches</span><span>Consultants</span><span>Marketing agencies</span>
+    <span>Dental clinics</span><span>Medical clinics</span><span>Med spas</span><span>Home improvement</span><span>Roofing</span><span>Solar</span><span>Coaches</span><span>Consultants</span><span>Marketing agencies</span>
+  </div>
+</div>
+
+<!-- ═══ How it works: sticky scenes ═══ -->
+<section class="sec" id="how">
+  <div class="wrap">
+    <div class="sec-head center rv">
+      <span class="eyebrow">How it works</span>
+      <h2>Stop trusting what people type.<br><span class="accent">Read what's true.</span></h2>
+      <p class="lede">From the ad click to the right next step, every lead goes through the same four moves.</p>
+    </div>
+
+    <div class="scenes">
+      <div class="scene-steps">
+        <div class="scene" data-v="0">
+          <span class="num">01</span>
+          <h3>Captures every lead on a smart form.</h3>
+          <p>A short form drops into the funnel you already run. No rebuild and no new CRM.</p>
+          <ul><li>Name, email and mobile</li><li>Works with any ad source</li></ul>
+        </div>
+        <div class="scene" data-v="1">
+          <span class="num">02</span>
+          <h3>Reads real data on a soft pull.</h3>
+          <p>Credit, income and debt to income come straight from the soft pull. Nobody can fudge the numbers to get through the form.</p>
+          <ul><li>Decision in seconds</li><li>No impact on the customer's credit score</li></ul>
+        </div>
+        <div class="scene" data-v="2">
+          <span class="num">03</span>
+          <h3>Routes every lead by your rules.</h3>
+          <p>You set the criteria. Buyers above it book straight into your sales calendar. Below it they go to a lower-ticket offer. Everyone else is nurtured until they're ready.</p>
+          <ul><li>Your team only talks to qualified buyers</li><li>Full control over who goes where</li></ul>
+        </div>
+        <div class="scene" data-v="3">
+          <span class="num">04</span>
+          <h3>Trains your ads on buyers.</h3>
+          <p>Most funnels fire a conversion on every form fill. EZ Check holds that signal until a lead qualifies, then sends Meta and Google a clean event.</p>
+          <ul><li>Server-side events with dedup keys</li><li>Your ads go looking for more real buyers</li></ul>
+        </div>
+      </div>
+
+      <div class="scene-stage">
+        <div class="stage-sticky">
+          <!-- 0: smart form -->
+          <div class="vis on" data-v="0">
+            <div class="phone" id="phone">
+              <h4>Get started</h4>
+              <div class="sub">Takes about two minutes</div>
+              <div class="pf" id="pf0"><small>Full name</small><span></span></div>
+              <div class="pf" id="pf1"><small>Email</small><span></span></div>
+              <div class="pf" id="pf2"><small>Mobile</small><span></span></div>
+              <label class="pconsent" id="pcon"><i></i>I agree to a soft credit check. It won't affect my credit score.</label>
+              <div class="pbtn" id="pbtn">Continue</div>
+              <div class="pnote">Your details are kept private.</div>
+            </div>
+          </div>
+          <!-- 1: soft pull read -->
+          <div class="vis dark" data-v="1">
+            <span class="vis-cap">Soft pull read</span>
+            <div class="read">
+              <div class="read-head"><div class="av">SM</div><div><b>Sarah M.</b><small>Read in seconds</small></div><span class="tag ok" style="margin-left:auto" id="rTag">Pre-qualified</span></div>
+              <div class="read-row"><span>Credit score</span><b data-to="712">712</b><div class="bar"><span data-w="78"></span></div></div>
+              <div class="read-row"><span>Monthly income</span><b>$8,200</b><div class="bar"><span data-w="64"></span></div></div>
+              <div class="read-row"><span>Debt to income</span><b>34%</b><div class="bar g"><span data-w="34"></span></div></div>
+              <div class="read-row"><span>Available credit</span><b>$14,200</b><div class="bar"><span data-w="56"></span></div></div>
+            </div>
+            <span class="vis-foot" style="color:#6f7b90">Sample applicant. Illustrative figures.</span>
+          </div>
+          <!-- 2: routing -->
+          <div class="vis" data-v="2">
+            <span class="vis-cap">Your rules, applied to every lead</span>
+            <svg class="routing" viewBox="0 0 460 330" aria-hidden="true">
+              <defs><path id="r0" d="M128 165 C150 165 158 165 178 165"/><path id="rA" d="M290 165 C312 165 300 70 330 70"/><path id="rB" d="M290 165 C310 165 310 165 330 165"/><path id="rC" d="M290 165 C312 165 300 260 330 260"/></defs>
+              <g fill="none" stroke="#e3ddd9" stroke-width="2"><use href="#r0"/><use href="#rA"/><use href="#rB"/><use href="#rC"/></g>
+              <g fill="none" stroke="#3b82f6" stroke-width="2" class="dash"><use href="#rA"/><use href="#rB"/></g>
+              <g>
+                <circle r="5" fill="#3b82f6"><animateMotion dur="2.4s" repeatCount="indefinite" path="M128 165 C150 165 158 165 178 165 L290 165 C312 165 300 70 330 70"/></circle>
+                <circle r="5" fill="#93b4fb"><animateMotion dur="2.4s" begin=".8s" repeatCount="indefinite" path="M128 165 C150 165 158 165 178 165 L290 165 C310 165 310 165 330 165"/></circle>
+                <circle r="5" fill="#c8c1bc"><animateMotion dur="2.4s" begin="1.6s" repeatCount="indefinite" path="M128 165 C150 165 158 165 178 165 L290 165 C312 165 300 260 330 260"/></circle>
+              </g>
+              <rect x="18" y="141" width="110" height="48" rx="12" fill="#fff" stroke="#ebe6e3"/><text x="73" y="170" text-anchor="middle" font-size="13" font-weight="600" fill="#0b1526">New lead</text>
+              <rect x="178" y="133" width="112" height="64" rx="14" fill="#0b1526"/><text x="234" y="161" text-anchor="middle" font-size="13" font-weight="700" fill="#fff">EZ Check</text><text x="234" y="179" text-anchor="middle" font-size="10.5" fill="#8f9bb0">soft pull + rules</text>
+              <rect x="330" y="46" width="122" height="48" rx="12" fill="#fff" stroke="#c9d8fb"/><text x="391" y="67" text-anchor="middle" font-size="12.5" font-weight="700" fill="#0b1526">Sales calendar</text><text x="391" y="83" text-anchor="middle" font-size="10.5" fill="#5b6475">above your criteria</text>
+              <rect x="330" y="141" width="122" height="48" rx="12" fill="#fff" stroke="#c9d8fb"/><text x="391" y="162" text-anchor="middle" font-size="12.5" font-weight="700" fill="#0b1526">Low-ticket offer</text><text x="391" y="178" text-anchor="middle" font-size="10.5" fill="#5b6475">below your criteria</text>
+              <rect x="330" y="236" width="122" height="48" rx="12" fill="#fff" stroke="#ebe6e3"/><text x="391" y="257" text-anchor="middle" font-size="12.5" font-weight="700" fill="#0b1526">Nurture</text><text x="391" y="273" text-anchor="middle" font-size="10.5" fill="#5b6475">not ready yet</text>
+            </svg>
+            <span class="vis-foot">Destinations and criteria are set by you.</span>
+          </div>
+          <!-- 3: pixel -->
+          <div class="vis dark" data-v="3">
+            <span class="vis-cap">Conversion events sent to your ad platforms</span>
+            <div class="pix">
+              <h4>Only qualified leads fire.</h4>
+              <p>Everyone else is held back, so the platform learns who actually buys.</p>
+              <div class="pix-grid" id="pix"></div>
+              <div class="pix-legend"><span><i style="background:#3b82f6"></i>Fired to Meta and Google</span><span><i style="background:#33405a"></i>Held back</span></div>
+            </div>
+            <span class="vis-foot" style="color:#6f7b90">Representative view. Not a forecast.</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ═══ Old way vs EZ Check ═══ -->
+<section class="sec" id="compare" style="padding-top:40px">
+  <div class="wrap">
+    <div class="sec-head center rv">
+      <span class="eyebrow">Why it's different</span>
+      <h2>The old way runs on guesses.<br><span class="accent">EZ Check runs on facts.</span></h2>
+    </div>
+    <div class="tabs rv" role="tablist">
+      <button class="tab on" data-t="0" role="tab">Qualifying leads</button>
+      <button class="tab" data-t="1" role="tab">Your sales team</button>
+      <button class="tab" data-t="2" role="tab">Your ads</button>
+    </div>
+    <div class="compare rv" id="cmp"></div>
+  </div>
+</section>
+
+<!-- ═══ Flow ═══ -->
+<section class="sec" style="padding-top:20px">
+  <div class="wrap">
+    <div class="sec-head center rv">
+      <span class="eyebrow">The whole loop</span>
+      <h2>From the ad click<br><span class="accent">to the right next step.</span></h2>
+      <p class="lede">And the result goes back to your ads, so next month's leads are better than this month's.</p>
+    </div>
+    <div class="flow-wrap rv">
+      <svg class="flow-h" viewBox="0 0 1080 330" aria-hidden="true">
+        <g fill="none" stroke="#e3ddd9" stroke-width="2">
+          <path d="M170 74 C210 74 210 150 250 150"/><path d="M170 226 C210 226 210 150 250 150"/>
+          <path d="M400 150 L470 150"/>
+          <path d="M650 150 C700 150 700 54 760 54"/><path d="M650 150 L760 150"/><path d="M650 150 C700 150 700 246 760 246"/>
+        </g>
+        <g fill="none" stroke="#3b82f6" stroke-width="2" class="dash">
+          <path d="M170 74 C210 74 210 150 250 150"/><path d="M170 226 C210 226 210 150 250 150"/><path d="M400 150 L470 150"/><path d="M650 150 C700 150 700 54 760 54"/><path d="M650 150 L760 150"/>
+        </g>
+        <path d="M560 192 C560 310 100 320 100 250" fill="none" stroke="#93b4fb" stroke-width="2" class="dash"/>
+        <rect x="372" y="290" width="236" height="30" rx="9" fill="#eef3fe"/><text x="490" y="310" text-anchor="middle" font-size="12.5" font-weight="600" fill="#26324a">Qualified pixel back to your ads</text>
+        <rect x="30" y="50" width="140" height="48" rx="12" fill="#fff" stroke="#ebe6e3"/><text x="100" y="79" text-anchor="middle" font-size="14" font-weight="600" fill="#0b1526">Meta ads</text>
+        <rect x="30" y="202" width="140" height="48" rx="12" fill="#fff" stroke="#ebe6e3"/><text x="100" y="231" text-anchor="middle" font-size="14" font-weight="600" fill="#0b1526">Google ads</text>
+        <rect x="250" y="122" width="150" height="56" rx="13" fill="#fff" stroke="#ebe6e3"/><text x="325" y="146" text-anchor="middle" font-size="14" font-weight="700" fill="#0b1526">Smart form</text><text x="325" y="164" text-anchor="middle" font-size="11" fill="#5b6475">any funnel, any source</text>
+        <rect x="470" y="108" width="180" height="84" rx="16" fill="#0b1526"/>
+        <g transform="translate(486 128) scale(1.15)"><rect width="32" height="32" rx="9" fill="#1b2740"/><path d="M16 6.5a9.5 9.5 0 1 1-9.1 6.8" fill="none" stroke="#3B82F6" stroke-width="2.6" stroke-linecap="round"/><path d="M11.2 16.2l3.4 3.4 6.4-7" fill="none" stroke="#fff" stroke-width="2.8" stroke-linecap="round" stroke-linejoin="round"/></g>
+        <text x="532" y="146" font-size="15" font-weight="800" fill="#fff">EZ Check</text><text x="532" y="165" font-size="11" fill="#8f9bb0">soft pull + your rules</text>
+        <rect x="760" y="30" width="190" height="48" rx="12" fill="#fff" stroke="#c9d8fb"/><text x="855" y="59" text-anchor="middle" font-size="14" font-weight="600" fill="#0b1526">Sales calendar</text>
+        <rect x="760" y="126" width="190" height="48" rx="12" fill="#fff" stroke="#c9d8fb"/><text x="855" y="155" text-anchor="middle" font-size="14" font-weight="600" fill="#0b1526">Low-ticket offer</text>
+        <rect x="760" y="222" width="190" height="48" rx="12" fill="#fff" stroke="#ebe6e3"/><text x="855" y="251" text-anchor="middle" font-size="14" font-weight="600" fill="#0b1526">Nurture</text>
+      </svg>
+      <svg class="flow-v" viewBox="0 0 300 560" width="100%" style="max-width:320px" aria-hidden="true">
+        <g fill="none" stroke="#3b82f6" stroke-width="2" class="dash"><path d="M150 58 L150 110"/><path d="M150 166 L150 220"/><path d="M150 300 C150 340 60 330 60 380"/><path d="M150 300 L150 380"/><path d="M150 300 C150 340 240 330 240 380"/></g>
+        <rect x="40" y="10" width="220" height="48" rx="12" fill="#fff" stroke="#ebe6e3"/><text x="150" y="39" text-anchor="middle" font-size="14" font-weight="600" fill="#0b1526">Meta and Google ads</text>
+        <rect x="40" y="110" width="220" height="56" rx="13" fill="#fff" stroke="#ebe6e3"/><text x="150" y="143" text-anchor="middle" font-size="14" font-weight="700" fill="#0b1526">Smart form</text>
+        <rect x="40" y="220" width="220" height="80" rx="16" fill="#0b1526"/><text x="150" y="256" text-anchor="middle" font-size="16" font-weight="800" fill="#fff">EZ Check</text><text x="150" y="276" text-anchor="middle" font-size="11.5" fill="#8f9bb0">soft pull + your rules</text>
+        <rect x="6" y="380" width="96" height="52" rx="12" fill="#fff" stroke="#c9d8fb"/><text x="54" y="403" text-anchor="middle" font-size="12" font-weight="600" fill="#0b1526">Sales</text><text x="54" y="419" text-anchor="middle" font-size="12" font-weight="600" fill="#0b1526">calendar</text>
+        <rect x="102" y="380" width="96" height="52" rx="12" fill="#fff" stroke="#c9d8fb"/><text x="150" y="403" text-anchor="middle" font-size="12" font-weight="600" fill="#0b1526">Low-ticket</text><text x="150" y="419" text-anchor="middle" font-size="12" font-weight="600" fill="#0b1526">offer</text>
+        <rect x="198" y="380" width="96" height="52" rx="12" fill="#fff" stroke="#ebe6e3"/><text x="246" y="411" text-anchor="middle" font-size="12" font-weight="600" fill="#0b1526">Nurture</text>
+        <rect x="30" y="480" width="240" height="40" rx="10" fill="#eef3fe"/><text x="150" y="505" text-anchor="middle" font-size="12.5" font-weight="600" fill="#26324a">Qualified pixel back to your ads</text>
+      </svg>
+    </div>
+  </div>
+</section>
+
+<!-- ═══ Trust ═══ -->
+<section class="sec" id="trust" style="padding-top:20px">
+  <div class="wrap">
+    <div class="sec-head center rv">
+      <span class="eyebrow">Built to be trusted</span>
+      <h2>Soft, controlled<br><span class="accent">and not a lender.</span></h2>
+      <p class="lede">Three promises your customers and your team can rely on.</p>
+    </div>
+    <div class="grid-3">
+      <div class="card tcard rv">
+        <div class="t-top"><h3><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M20 13c0 5-3.5 7.5-7.7 9a1 1 0 0 1-.6 0C7.5 20.5 4 18 4 13V6a1 1 0 0 1 1-1c2 0 4.5-1.2 6.2-2.7a1.2 1.2 0 0 1 1.6 0C14.5 3.8 17 5 19 5a1 1 0 0 1 1 1z"/></svg>Soft pull only.</h3><p>Pre-qualification never touches a credit score.</p></div>
+        <div class="t-vis"><div class="chk">
+          <div><span class="ck"><svg width="10" height="10" viewBox="0 0 24 24" fill="none" stroke="#fff" stroke-width="3.5" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6 9 17l-5-5"/></svg></span>Soft inquiry only</div>
+          <div><span class="ck"><svg width="10" height="10" viewBox="0 0 24 24" fill="none" stroke="#fff" stroke-width="3.5" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6 9 17l-5-5"/></svg></span>No credit score impact</div>
+          <div><span class="ck"><svg width="10" height="10" viewBox="0 0 24 24" fill="none" stroke="#fff" stroke-width="3.5" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6 9 17l-5-5"/></svg></span>Hard pull only with authorization</div>
+        </div></div>
+      </div>
+      <div class="card tcard rv" style="--d:.08s">
+        <div class="t-top"><h3><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 21v-7M4 10V3M12 21v-9M12 8V3M20 21v-5M20 12V3M1 14h6M9 8h6M17 16h6"/></svg>Your rules.</h3><p>You decide the criteria and where every lead goes.</p></div>
+        <div class="t-vis"><div class="rule-ui">
+          <div>Above criteria to sales calendar<span class="tog"></span></div>
+          <div>Below criteria to low-ticket offer<span class="tog"></span></div>
+          <div>Not ready to nurture<span class="tog"></span></div>
+        </div></div>
+      </div>
+      <div class="card tcard rv" style="--d:.16s">
+        <div class="t-top"><h3><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="11" width="18" height="11" rx="2"/><path d="M7 11V7a5 5 0 0 1 10 0v4"/></svg>Not a lender.</h3><p>EZ Check pre-qualifies. Independent lenders make the credit decisions.</p></div>
+        <div class="t-vis"><div class="handoff">
+          <div class="dk">EZ Check<br><small style="font-weight:500;color:#8f9bb0">pre-qualifies</small></div>
+          <svg width="28" height="12" viewBox="0 0 28 12"><path d="M0 6h24M19 1l5 5-5 5" fill="none" stroke="#8a93a3" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg>
+          <div>Independent<br>lenders decide</div>
+        </div></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ═══ Who ═══ -->
+<section class="sec" style="padding-top:20px">
+  <div class="wrap">
+    <div class="sec-head center rv">
+      <span class="eyebrow">Who it's for</span>
+      <h2>Any business that sells<br><span class="accent">on customer financing.</span></h2>
+    </div>
+    <div class="who">
+      <div class="card rv"><span class="ico"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 3c-3 0-6 1.5-6 5 0 5 2 13 3.5 13S11 15 12 15s1 6 2.5 6S18 13 18 8c0-3.5-3-5-6-5z"/></svg></span><h3>Dental and medical clinics</h3><p class="muted">Know which patients can finance a treatment plan before the consult.</p></div>
+      <div class="card rv" style="--d:.06s"><span class="ico"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M3 10.5 12 3l9 7.5V21H3z"/><path d="M9 21v-6h6v6"/></svg></span><h3>Home improvement</h3><p class="muted">Know who can afford the job before anyone drives out to quote.</p></div>
+      <div class="card rv" style="--d:.12s"><span class="ico"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 10 12 5 2 10l10 5z"/><path d="M6 12v5c3 2 9 2 12 0v-5"/></svg></span><h3>Coaches and consultants</h3><p class="muted">Spend discovery calls with people who can fund the program.</p></div>
+      <div class="card rv" style="--d:.18s"><span class="ico"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M3 11v2a1 1 0 0 0 1 1h3l5 4V6L7 10H4a1 1 0 0 0-1 1z"/><path d="M16 8a5 5 0 0 1 0 8"/></svg></span><h3>Marketing agencies</h3><p class="muted">Hand clients leads that were checked before they reached the sales team.</p></div>
+    </div>
+  </div>
+</section>
+
+<!-- ═══ FAQ ═══ -->
+<section class="sec" id="faq" style="padding-top:20px">
+  <div class="narrow">
+    <div class="sec-head center rv"><h2>FAQ.</h2></div>
+    <div class="faq rv">
+      <details><summary>What does EZ Check actually read?<span class="pm"><svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round"><path d="M12 5v14M5 12h14"/></svg></span></summary><p>Real credit, income and debt to income, pulled on a soft inquiry the moment a lead comes in. You work from the actual numbers instead of what someone typed into a form.</p></details>
+      <details><summary>Does it affect my customer's credit score?<span class="pm"><svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round"><path d="M12 5v14M5 12h14"/></svg></span></summary><p>No. Pre-qualification is a soft pull and does not affect their credit score. A hard inquiry only happens later at full application, and only with the customer's authorization.</p></details>
+      <details><summary>How fast are results?<span class="pm"><svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round"><path d="M12 5v14M5 12h14"/></svg></span></summary><p>Seconds. The lead is routed while they're still warm.</p></details>
+      <details><summary>Who decides where each lead goes?<span class="pm"><svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round"><path d="M12 5v14M5 12h14"/></svg></span></summary><p>You do. You set the criteria. Leads above it go to your sales calendar, leads below it go to a lower-ticket offer, and you can send the rest into any funnel you choose.</p></details>
+      <details><summary>Do I need a new website or CRM?<span class="pm"><svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round"><path d="M12 5v14M5 12h14"/></svg></span></summary><p>No. The smart form drops into your existing funnel. On the demo we map it onto the way you capture and work leads today.</p></details>
+      <details><summary>Is EZ Check a lender?<span class="pm"><svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round"><path d="M12 5v14M5 12h14"/></svg></span></summary><p>No. EZ Check pre-qualifies leads. Financing is provided by independent third-party lenders and is subject to their approval.</p></details>
+    </div>
+  </div>
+</section>
+
+<!-- ═══ CTA ═══ -->
+<section style="padding:20px 0 40px">
+  <div class="wrap">
+    <div class="cta-band rv">
+      <h2>See EZ Check<br><span class="accent">on your own leads.</span></h2>
+      <p>Book a 30 minute demo. We'll map it onto your funnel and show you where every lead would go.</p>
+      <div class="hero-actions">
+        <a class="btn btn-primary" href="book.html">Book a demo</a>
+        <a class="btn btn-ghost" href="#how">See how it works</a>
+      </div>
+    </div>
+  </div>
+</section>
+
+</main>
+
+<footer>
+  <div class="wrap">
+    <div class="fcols">
+      <div>
+        <a class="brand" href="index.html" style="padding:0">
+          <svg width="28" height="28" viewBox="0 0 32 32" aria-hidden="true"><rect width="32" height="32" rx="9" fill="#0B1526"/><path d="M16 6.5a9.5 9.5 0 1 1-9.1 6.8" fill="none" stroke="#3B82F6" stroke-width="2.6" stroke-linecap="round"/><path d="M11.2 16.2l3.4 3.4 6.4-7" fill="none" stroke="#fff" stroke-width="2.8" stroke-linecap="round" stroke-linejoin="round"/></svg>
+          <b style="color:var(--ink)">EZ<span> Check</span></b>
+        </a>
+        <p>Soft-pull pre-qualification and lead routing for businesses that sell on finance.</p>
+      </div>
+      <div><h5>EZ Check</h5><a href="#how">How it works</a><a href="#compare">Why it's different</a><a href="book.html">Book a demo</a></div>
+      <div><h5>Legal</h5><a href="privacy.html">Privacy Policy</a><a href="terms.html">Terms of Service</a><a href="privacy.html#s11">Communication Consent</a></div>
+    </div>
+    <p class="disclaimer">EZ Check is a pre-qualification tool and is not a lender. Where financing is used it is provided by independent third-party lenders and is subject to lender approval and applicable terms. Final rates, terms, amounts and fees are determined by the lender at approval. Soft-pull pre-qualification does not affect a consumer's credit score. A hard inquiry may occur only with the consumer's authorization at full application. Figures shown on this page are illustrative sample data.</p>
+  </div>
+</footer>
+
+<script>
+const $ = id => document.getElementById(id);
+const reduce = matchMedia('(prefers-reduced-motion: reduce)').matches;
+const wait = ms => new Promise(r => setTimeout(r, reduce ? 0 : ms));
+
+// Reveal on scroll
+const io = new IntersectionObserver(es => es.forEach(e => { if (e.isIntersecting) { e.target.classList.add('in'); io.unobserve(e.target); } }), { threshold: 0.12 });
+document.querySelectorAll('.rv').forEach(el => io.observe(el));
+
+/* ── Hero console. Sample data only. ── */
+const PEOPLE = [
+  { n: 'Sarah M.', i: 'SM', t: 'Opted in from a Meta ad', src: 'Meta', v: ['712', '$8,200', '34%', '$14,200'], w: [78, 64, 34, 56], r: 'hi' },
+  { n: 'David R.', i: 'DR', t: 'Applied from a Google ad', src: 'Google', v: ['648', '$5,100', '41%', '$6,800'], w: [62, 42, 41, 30], r: 'lo' },
+  { n: 'Priya K.', i: 'PK', t: 'Opted in on your website', src: 'Website', v: ['571', '$3,400', '58%', '$900'], w: [44, 28, 58, 8], r: 'nu' },
+  { n: 'Tom W.', i: 'TW', t: 'Applied from a Meta ad', src: 'Meta', v: ['744', '$11,600', '27%', '$22,500'], w: [84, 82, 27, 80], r: 'hi' },
+  { n: 'Lena B.', i: 'LB', t: 'Opted in from a Google ad', src: 'Google', v: ['689', '$6,300', '38%', '$9,100'], w: [70, 52, 38, 40], r: 'lo' },
+];
+const ROUTE = {
+  hi: { tag: 'Pre-qualified', cls: 'ok', t: 'Above your criteria', s: 'Booked straight to sales', d: 'Sales calendar' },
+  lo: { tag: 'Pre-qualified', cls: 'ok', t: 'Below your high-ticket criteria', s: 'Sent to your lower-ticket offer', d: 'Low-ticket offer' },
+  nu: { tag: 'Not ready yet', cls: 'wait', t: 'Not ready yet', s: 'No sales time spent', d: 'Nurture' },
+};
+const counts = { all: 0, hi: 0, lo: 0, nu: 0 };
+let k = 0;
+function feed() {
+  $('feed').innerHTML = PEOPLE.map((p, j) => `<div class="lead${j === k ? ' on' : ''}"><span class="av">${p.i}</span><span><b>${p.n}</b><small>${p.t}</small></span></div>`).join('');
+}
+async function hero() {
+  const p = PEOPLE[k], R = ROUTE[p.r];
+  feed();
+  $('pAv').textContent = p.i; $('pName').textContent = p.n; $('pType').innerHTML = p.t;
+  $('pTag').className = 'tag run'; $('pTag').textContent = 'Reading';
+  $('dec').className = 'decision'; $('decT').textContent = 'Reading on a soft pull'; $('decS').textContent = 'No credit score impact'; $('decD').textContent = 'Waiting';
+  for (let j = 0; j < 4; j++) { $('v' + j).textContent = '--'; $('b' + j).style.width = 0; $('m' + j).classList.add('on'); }
+  await wait(900);
+  for (let j = 0; j < 4; j++) {
+    $('m' + j).classList.remove('on'); $('v' + j).textContent = p.v[j]; $('b' + j).style.width = p.w[j] + '%';
+    await wait(320);
+  }
+  await wait(400);
+  $('pTag').className = 'tag ' + R.cls; $('pTag').textContent = R.tag;
+  $('dec').className = 'decision ' + R.cls; $('decT').textContent = R.t; $('decS').textContent = R.s; $('decD').textContent = R.d;
+  counts.all++; counts[p.r]++;
+  $('sAll').textContent = counts.all; $('sHi').textContent = counts.hi; $('sLo').textContent = counts.lo; $('sNu').textContent = counts.nu;
+  await wait(2600);
+  k = (k + 1) % PEOPLE.length;
+  hero();
+}
+hero();
+
+/* ── Sticky scenes ── */
+const scenes = [...document.querySelectorAll('.scene')], visuals = [...document.querySelectorAll('.vis')];
+let active = -1;
+function show(v) {
+  if (v === active) return; active = v;
+  scenes.forEach(s => s.classList.toggle('on', +s.dataset.v === v));
+  visuals.forEach(el => el.classList.toggle('on', +el.dataset.v === v));
+  if (v === 0) typeForm();
+  if (v === 1) fillRead();
+  if (v === 3) firePixels();
+}
+const sio = new IntersectionObserver(es => es.forEach(e => { if (e.isIntersecting) show(+e.target.dataset.v); }), { rootMargin: innerWidth < 1000 ? '-62% 0px -30% 0px' : '-45% 0px -45% 0px' });
+scenes.forEach(s => sio.observe(s));
+
+let formRun = 0;
+async function typeForm() {
+  const run = ++formRun;
+  const f = [[$('pf0'), 'Sarah Mitchell'], [$('pf1'), 'sarah@email.com'], [$('pf2'), '(555) 014-2290']];
+  f.forEach(([el]) => { el.classList.remove('done'); el.querySelector('span').textContent = ''; });
+  $('pcon').classList.remove('on');
+  for (const [el, txt] of f) {
+    for (const ch of txt) { if (run !== formRun) return; el.querySelector('span').textContent += ch; await wait(55); }
+    el.classList.add('done'); await wait(250);
+  }
+  $('pcon').classList.add('on'); await wait(500);
+  $('pbtn').classList.add('press'); await wait(180); $('pbtn').classList.remove('press');
+}
+function fillRead() {
+  document.querySelectorAll('.read .bar span').forEach(b => { b.style.width = 0; });
+  setTimeout(() => document.querySelectorAll('.read .bar span').forEach((b, i) => setTimeout(() => b.style.width = b.dataset.w + '%', i * 220)), 150);
+}
+const pix = $('pix');
+for (let i = 0; i < 100; i++) pix.appendChild(document.createElement('i'));
+function firePixels() {
+  const cells = [...pix.children]; cells.forEach(c => c.className = '');
+  // ponytail: fixed pseudo-random pattern, roughly a third fire. Representative only.
+  cells.forEach((c, i) => setTimeout(() => c.className = ((i * 37) % 100) < 31 ? 'q' : 's', i * 14));
+}
+
+/* ── Compare tabs ── */
+const CMP = [
+  { o: ['You ask. They answer.', 'Forms ask about income and budget. People say whatever gets them through.', ['Self-reported numbers', 'Easy to fudge', 'Qualified on guesses']],
+    n: ['You read the data.', 'A soft pull reads real credit, income and debt to income the moment a lead enters.', ['Real numbers on a soft pull', 'Nothing to fudge', 'Every decision made on facts']] },
+  { o: ['Reps call everyone.', 'The whole list gets dialled. Calendars fill with calls that were never going to close.', ['Dials wasted on dead leads', 'Calendars full of no-fit calls', 'The wrong customers slip through']],
+    n: ['Reps call qualified buyers.', 'Only leads that clear your criteria reach your team. Everyone else goes somewhere that costs nothing.', ['Only qualified conversations', 'Hours back every week', 'The right offer for each lead']] },
+  { o: ['Your pixel learns from everyone.', 'A conversion fires on every form fill, so the platform finds more people who fill in forms.', ['Every form fill counts', 'Ads optimise for browsers', 'Lead quality left to luck']],
+    n: ['Your pixel learns from buyers.', 'EZ Check holds the event until a lead qualifies, then sends a clean signal to Meta and Google.', ['Only qualified leads fire', 'Server-side with dedup keys', 'Ads go find more real buyers']] },
+];
+const X = '<svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#8a93a3" stroke-width="2.2" stroke-linecap="round"><path d="M18 6 6 18M6 6l12 12"/></svg>';
+const V = '<svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#16a34a" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6 9 17l-5-5"/></svg>';
+function cmp(t) {
+  const c = CMP[t];
+  $('cmp').innerHTML = `<div class="cmp old panel-fade"><span class="eyebrow">The old way</span><h3>${c.o[0]}</h3><p>${c.o[1]}</p><ul>${c.o[2].map(x => `<li>${X}${x}</li>`).join('')}</ul></div>
+    <div class="cmp panel-fade" style="animation-delay:.08s"><span class="eyebrow">With EZ Check</span><h3>${c.n[0]}</h3><p>${c.n[1]}</p><ul>${c.n[2].map(x => `<li>${V}${x}</li>`).join('')}</ul></div>`;
+  document.querySelectorAll('.tab').forEach(b => b.classList.toggle('on', +b.dataset.t === t));
+}
+document.querySelectorAll('.tab').forEach(b => b.onclick = () => cmp(+b.dataset.t));
+cmp(0);
+show(0);
+</script>
+</body>
+</html>
